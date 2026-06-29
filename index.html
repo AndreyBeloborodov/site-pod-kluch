@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказать сайт</title>
+  <meta name="description" content=".">
+  <meta name="keywords" content="заказать сайт, создание сайтов, лендинг под ключ, разработка сайта, сайт для бизнеса, создание лендинга, веб-разработчик фрилансер, создание сайта недорого, сайт визитка, заказать лендинг">
+  <meta name="author" content="Андрей Белобородов">
+  <link rel="canonical" href="https://beloborodov-web.ru/">
+  <meta property="og:title" content="Заказать сайт | Белобородов Андрей">
+  <meta property="og:description" content="Создание лендингов, корпоративных сайтов. Сайт под ключ. Настройка SSL, домены.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beloborodov-web.ru/">
+  <meta property="og:site_name" content="Белобородов Андрей — Веб-разработчик">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Заказать сайт | Белобородов Андрей">
+  <meta name="twitter:description" content="Создание лендингов, корпоративных сайтов. Сайт под ключ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://beloborodov-web.ru/#person",
+        "name": "Андрей Белобородов",
+        "url": "https://beloborodov-web.ru/",
+        "jobTitle": "Веб-разработчик и системный администратор",
+        "description": "WEB разработчик. Создаю лендинги и сайты. Настраиваю SEO, SSL, домены.",
+        "sameAs": ["https://t.me/mojytel"],
+        "knowsAbout": ["Создание сайтов", "Веб-разработка", "Лендинги"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://beloborodov-web.ru/#website",
+        "url": "https://beloborodov-web.ru/",
+        "name": "Белобородов Андрей — Веб-разработчик",
+        "description": "Создание сайтов и лендингов за 1–3 дня",
+        "publisher": {"@id": "https://beloborodov-web.ru/#person"}
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Создание сайтов и лендингов",
+        "provider": {"@id": "https://beloborodov-web.ru/#person"},
+        "description": "Лендинги, корпоративные сайты",
+        "url": "https://beloborodov-web.ru/services.html",
+        "serviceType": ["Веб-разработка", "Создание лендингов", "Разработка сайтов"],
+        "areaServed": {"@type": "Country", "name": "Россия"},
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://beloborodov-web.ru/contacts.html",
+          "availableLanguage": "Russian"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --black:   #000000;
+      --dark-bg: #1A1A1A;
+      --surface: #222222;
+      --border:  #2E2E2E;
+      --cyan:    #00BCD4;
+      --cyan-dim:#00838F;
+      --white:   #F5F5F5;
+      --muted:   #888888;
+      --radius:  8px;
+      --font:    'JetBrains Mono', monospace;
+      --ease:    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+    .logo {
+      font-weight: 700; font-size: 1rem;
+      letter-spacing: -0.02em; color: var(--white);
+    }
+    .logo span { color: var(--cyan); }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      font-size: 0.875rem; font-weight: 500;
+      color: var(--muted);
+      position: relative;
+      transition: color 0.2s var(--ease);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute;
+      bottom: -4px; left: 0; width: 0; height: 1.5px;
+      background: var(--cyan);
+      transition: width 0.2s var(--ease);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .menu-toggle {
+      display: none; background: none; border: none;
+      color: var(--white); cursor: pointer; padding: 0.5rem;
+    }
+
+    /* ── MAIN ── */
+    main { flex: 1; }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-left {}
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      color: var(--cyan); text-transform: uppercase;
+      border: 1px solid var(--cyan-dim);
+      padding: 0.3rem 0.75rem; border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--cyan);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--cyan);
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 48ch;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--cyan); color: var(--black);
+      font-family: var(--font); font-weight: 600; font-size: 0.875rem;
+      padding: 0.75rem 1.5rem; border-radius: var(--radius);
+      transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    .btn-primary:hover { background: #00ACC1; transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--white);
+      font-family: var(--font); font-weight: 500; font-size: 0.875rem;
+      padding: 0.75rem 1.5rem; border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+    }
+    .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* Hero right — stats block */
+    .hero-right {
+      background: var(--dark-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .hero-terminal-header {
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-r { background: #FF5F57; }
+    .dot-y { background: #FEBC2E; }
+    .dot-g { background: #28C840; }
+    .terminal-title { font-size: 0.75rem; color: var(--muted); margin-left: auto; }
+    .terminal-line { font-size: 0.875rem; line-height: 2; }
+    .t-comment { color: #4A4A4A; }
+    .t-key { color: var(--muted); }
+    .t-val { color: var(--cyan); }
+    .t-str { color: #A5D6A7; }
+    .t-num { color: #FFD54F; }
+    .t-bool { color: #EF9A9A; }
+
+    /* ── FEATURES ── */
+    .features { padding: clamp(4rem, 8vw, 8rem) 0; border-bottom: 1px solid var(--border); }
+    .section-label {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      color: var(--cyan); text-transform: uppercase; margin-bottom: 1rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      margin-bottom: 3rem;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .feature-card {
+      background: var(--dark-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    .feature-card:hover { border-color: var(--cyan-dim); transform: translateY(-4px); }
+    .feature-num {
+      font-size: 0.75rem; color: var(--cyan); font-weight: 600;
+      letter-spacing: 0.1em; margin-bottom: 1rem; display: block;
+    }
+    .feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.6rem; }
+    .feature-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── STACK BADGES ── */
+    .stack { padding: clamp(4rem, 8vw, 8rem) 0; }
+    .stack-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+    .badge {
+      font-size: 0.8rem; font-weight: 500;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius);
+      color: var(--muted);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .badge:hover { border-color: var(--cyan); color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.8rem; color: var(--muted); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--cyan); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate { animation: fadeUp 0.42s ease-out forwards; opacity: 0; }
+    .d1 { animation-delay: 0.08s; }
+    .d2 { animation-delay: 0.16s; }
+    .d3 { animation-delay: 0.24s; }
+    .d4 { animation-delay: 0.32s; }
+    .d5 { animation-delay: 0.40s; }
+
+    /* ── LIGHT THEME ── */
+    body[data-theme="light"] {
+      --black:#F4F1EB; --dark-bg:#FFFFFF; --surface:#F9F7F3;
+      --border:#DDD9D0; --cyan:#B45309; --cyan-dim:#92400E;
+      --white:#1C1917; --muted:#78716C; --radius:12px;
+    }
+    body[data-theme="light"] header { background: rgba(244,241,235,0.9); border-bottom-color: var(--border); }
+    body[data-theme="light"] .hero-right { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    body[data-theme="light"] .feature-card { box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    body[data-theme="light"] .feature-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    body[data-theme="light"] .btn-primary { background: var(--cyan); color: #FFF; }
+    body[data-theme="light"] .btn-primary:hover { background: var(--cyan-dim); }
+    body[data-theme="light"] .logo span, body[data-theme="light"] .section-label,
+    body[data-theme="light"] .feature-num, body[data-theme="light"] .hero-tag { color: var(--cyan); }
+    body[data-theme="light"] .hero-tag { border-color: var(--cyan-dim); }
+    body[data-theme="light"] .nav-links a::after { background: var(--cyan); }
+    body[data-theme="light"] .footer-links a:hover { color: var(--cyan); }
+    body[data-theme="light"] .badge:hover { border-color: var(--cyan); color: var(--white); }
+    body[data-theme="light"] .t-str { color: #6B7280; }
+    body[data-theme="light"] .t-num { color: #B45309; }
+    body[data-theme="light"] .t-bool { color: #DC2626; }
+    body[data-theme="light"] .t-comment { color: #9CA3AF; }
+    body[data-theme="light"] .t-key { color: var(--muted); }
+
+    /* ── BRUTAL THEME ── */
+    body[data-theme="brutal"] {
+      --black:#FFFFFF; --dark-bg:#FFFFFF; --surface:#F0F0F0;
+      --border:#000000; --cyan:#000000; --cyan-dim:#333333;
+      --white:#000000; --muted:#333333; --radius:0px;
+      --font: 'Syne', sans-serif;
+    }
+    body[data-theme="brutal"] header { background: #000; border-bottom: 3px solid #000; }
+    body[data-theme="brutal"] header * { color: #FFF !important; }
+    body[data-theme="brutal"] .hero-right { border: 2px solid #000; box-shadow: 4px 4px 0 #000; }
+    body[data-theme="brutal"] .feature-card { border: 2px solid #000; box-shadow: 3px 3px 0 #000; transition: none; }
+    body[data-theme="brutal"] .feature-card:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 #000; }
+    body[data-theme="brutal"] .badge { border: 2px solid #000; font-weight: 700; }
+    body[data-theme="brutal"] .badge:hover { background: #000; color: #FFF; }
+    body[data-theme="brutal"] footer { border-top: 3px solid #000; }
+    body[data-theme="brutal"] .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem,6vw,5rem); font-weight: 800; }
+    body[data-theme="brutal"] .section-title { font-family: 'Syne', sans-serif; font-weight: 800; }
+    body[data-theme="brutal"] .section-label { border: 2px solid #000; padding: 2px 8px; display: inline-block; font-size: 0.85rem; }
+    body[data-theme="brutal"] .btn-primary { background: #000; color: #FFF; border: 2px solid #000; }
+    body[data-theme="brutal"] .btn-primary:hover { background: #333; }
+    body[data-theme="brutal"] .btn-ghost { border: 2px solid #000; font-weight: 700; }
+    body[data-theme="brutal"] .btn-ghost:hover { background: #000; color: #FFF; }
+    body[data-theme="brutal"] .hero-tag { border: 2px solid #000; background: #000; color: #FFF; font-weight: 700; }
+    body[data-theme="brutal"] .hero-tag::before { background: #FFF; }
+
+    /* ── THEME SWITCHER WIDGET ── */
+    .theme-switcher {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;
+      display: flex; flex-direction: column; gap: 0.4rem;
+      background: var(--dark-bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 0.6rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    body[data-theme="brutal"] .theme-switcher { border: 2px solid #000; border-radius: 0; box-shadow: 4px 4px 0 #000; }
+    .theme-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border); }
+    .theme-btns { display: flex; flex-direction: column; gap: 0.3rem; }
+    .theme-btn {
+      font-family: var(--font); font-size: 0.7rem; font-weight: 600;
+      padding: 0.35rem 0.75rem; cursor: pointer; border: 1px solid var(--border);
+      border-radius: calc(var(--radius) - 2px);
+      background: transparent; color: var(--muted);
+      transition: all .15s; white-space: nowrap;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .theme-btn:hover, .theme-btn.active { background: var(--cyan); color: var(--black); border-color: var(--cyan); }
+    body[data-theme="brutal"] .theme-btn:hover,
+    body[data-theme="brutal"] .theme-btn.active { background: #000; color: #FFF; border-color: #000; }
+    body[data-theme="light"] .theme-btn:hover,
+    body[data-theme="light"] .theme-btn.active { background: var(--cyan); color: #FFF; border-color: var(--cyan); }
+    .theme-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot-dark  { background: #00BCD4; }
+    .dot-light { background: #B45309; }
+    .dot-brutal{ background: #000; border: 1px solid #999; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-right { display: none; }
+      .features-grid { grid-template-columns: 1fr; }
+      .menu-toggle { display: flex; align-items: center; }
+      .nav-links {
+        position: absolute; top: 65px; left: 0; right: 0;
+        background: var(--black);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column; align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1.25rem;
+        transform: translateY(-8px);
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.2s, transform 0.2s;
+      }
+      .nav-links.open { opacity: 1; transform: translateY(0); pointer-events: all; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Белобородов<span>.</span>dev</a>
+        <button class="menu-toggle" aria-label="Меню" id="menuBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="https://www.avito.ru/moskva/predlozheniya_uslug/razrabotka_saytov_pod_klyuch_8123603746?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller">Avito</a></li>
+          <li><a href="https://t.me/mojytel">Telegram</a></li>
+          <li><a href="https://vk.ru/andreyk_a">VK</a></li>
+          <li><a href="tel:+7-920-308-35-51">+7-920-308-35-51</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <div class="hero-tag animate d1">Доступен для новых проектов</div>
+        <h1 class="animate d2">
+          Андрей Белобородов —<br><em>WEB</em><br>разработчик
+        </h1>
+        <p class="hero-desc animate d3">
+          Вёрстка под ваши задачи:
+          сделаю сайт удобным для пользователей и полезным для бизнеса.
+          Обсудим цели - подберу технические решения.
+        </p>
+        <div class="hero-actions animate d4">
+          <a href="tel:+7-920-308-35-51" class="btn-primary">Связаться
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right animate d3">
+        <div class="hero-terminal-header">
+          <div class="dot dot-r"></div>
+          <div class="dot dot-y"></div>
+          <div class="dot dot-g"></div>
+          <span class="terminal-title">about.json</span>
+        </div>
+        <div class="terminal-line t-comment">// Белобородов Андрей</div>
+        <div class="terminal-line"><span class="t-key">"role"</span>: <span class="t-str">"WEB Dev"</span>,</div>
+        <div class="terminal-line"><span class="t-key">"location"</span>: <span class="t-str">"Россия / Remote"</span>,</div>
+        <div class="terminal-line"><span class="t-key">"experience"</span>: <span class="t-num">5+</span>,</div>
+        <div class="terminal-line"><span class="t-key">"stack"</span>: [<span class="t-str">"HTML"</span>, <span class="t-str">"CSS"</span>, <span class="t-str">"JS"</span>],</div>
+        <div class="terminal-line"><span class="t-key">"ai_tools"</span>: <span class="t-bool">true</span>,</div>
+        <div class="terminal-line"><span class="t-key">"available"</span>: <span class="t-bool">true</span></div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="section-label animate d1">Почему со мной</div>
+      <h2 class="section-title animate d2">Скорость. Надёжность. Полный цикл.</h2>
+      <div class="features-grid">
+        <article class="feature-card animate d2">
+          <span class="feature-num">01</span>
+          <h3>Превращаю трафик в доход</h3>
+          <p>Создаю лендинги, где каждый пиксель работает на конверсию.</p>
+        </article>
+        <article class="feature-card animate d3">
+          <span class="feature-num">02</span>
+          <h3>Использую нейросети</h3>
+          <p>Ваш бюджет не раздувается, качество не падает.</p>
+        </article>
+        <article class="feature-card animate d4">
+          <span class="feature-num">03</span>
+          <h3>Не только фронтенд</h3>
+          <p> Настраиваю SEO, домены, SSL, почту и мессенджеры. Сайт работает стабильно с первого дня.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-copy">© 2026 Белобородов Андрей. Все права защищены.</span>
+      <nav class="footer-links">
+        <a href="https://t.me/mojytel" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:andreybelo73.30@gmail.com">Email</a>
+        <a href="tel:+7-920-308-35-51">+7-920-308-35-51</a>
+      </nav>
+    </div>
+  </footer>
+    <script>
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('navLinks');
+    btn.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    // Theme switcher
+    const themeBtns = document.querySelectorAll('.theme-btn');
+    const saved = localStorage.getItem('pf-theme') || 'dark';
+    applyTheme(saved);
+    themeBtns.forEach(b => b.addEventListener('click', () => applyTheme(b.dataset.t)));
+    function applyTheme(t) {
+      document.body.setAttribute('data-theme', t);
+      localStorage.setItem('pf-theme', t);
+      themeBtns.forEach(b => b.classList.toggle('active', b.dataset.t === t));
+    }
+  </script>
+</body>
+</html>
